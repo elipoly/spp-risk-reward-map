@@ -6,12 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: sans-serif;
-      margin: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       background: #f8f8f8;
     }
-    h1, h2 {
+    .navbar {
+      background-color: #1a1a1a;
+      overflow: hidden;
+      padding: 0.5rem 2rem;
+    }
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      background-color: #575757;
+    }
+    .banner {
+      background: url('your-banner-image.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #003366;
+    }
+    .banner h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.3em;
+    }
+    .banner p {
+      font-size: 1.3em;
+      max-width: 800px;
+      margin: auto;
+      color: #e0e0e0;
+    }
+    .content {
+      padding: 2rem;
+    }
+    h2 {
       color: #333;
+      margin-top: 3rem;
     }
     iframe {
       width: 100%;
@@ -19,22 +56,37 @@
       border: 1px solid #aaa;
       margin-bottom: 3rem;
     }
-    .map-title {
-      margin-top: 3rem;
-    }
   </style>
 </head>
 <body>
-  <h1>Suitability Mapping – Hokkaido</h1>
-  <p>This site presents interactive maps of solar power plant (SPP) suitability and conflict zones in Hokkaido, Japan.</p>
 
-  <h2 class="map-title">Techno-Economic Suitability</h2>
-  <iframe src="techno_econ_map2.html"></iframe>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ahp_method.html">AHP Method</a>
+    <a href="variables.html">Variables</a>
+    <a href="bivariate_moran.html">Bivariate Moran’s I</a>
+  </div>
 
-  <h2 class="map-title">Socio-Environmental Suitability</h2>
-  <iframe src="socioenv_map2.html"></iframe>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Revealing Spatial Contradictions in Solar Deployment</h1>
+    <p>A Multicriteria Conflict Mapping Approach for Sustainable Energy Transitions</p>
+  </div>
 
-  <h2 class="map-title">Conflict Zones (SPP in Unsuitable Areas)</h2>
-  <iframe src="map_conflict.html"></iframe>
+  <!-- Main content -->
+  <div class="content">
+    <p>This site presents interactive maps of solar power plant (SPP) suitability and conflict zones in Hokkaido, Japan.</p>
+
+    <h2>Techno-Economic Suitability</h2>
+    <iframe src="techno_econ_map2.html"></iframe>
+
+    <h2>Socio-Environmental Suitability</h2>
+    <iframe src="socioenv_map2.html"></iframe>
+
+    <h2>Conflict Zones (SPP in Unsuitable Areas)</h2>
+    <iframe src="map_conflict.html"></iframe>
+  </div>
+
 </body>
 </html>
