@@ -10,11 +10,13 @@
       margin: 0;
       background: #f8f8f8;
     }
+
     .navbar {
       background-color: #1a1a1a;
       overflow: hidden;
       padding: 0.5rem 2rem;
     }
+
     .navbar a {
       float: left;
       color: white;
@@ -23,9 +25,11 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .navbar a:hover {
       background-color: #575757;
     }
+
     .banner {
       background: url('panneaux1.jpg') center/cover no-repeat;
       color: white;
@@ -33,23 +37,28 @@
       padding: 80px 20px;
       background-color: #003366;
     }
+
     .banner h1 {
       font-size: 2.8em;
       margin-bottom: 0.3em;
     }
+
     .banner p {
       font-size: 1.3em;
       max-width: 800px;
       margin: auto;
       color: #e0e0e0;
     }
+
     .content {
       padding: 2rem;
     }
+
     h2 {
       color: #333;
       margin-top: 3rem;
     }
+
     iframe {
       width: 100%;
       height: 600px;
@@ -57,27 +66,28 @@
       margin-bottom: 3rem;
     }
 
-    /* NEW: 2-map layout styles */
     .map-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 2rem;
     }
+
     .map-container {
       flex: 1;
       min-width: 48%;
     }
+
     .map-container h3 {
       margin-bottom: 0.5rem;
       color: #444;
     }
+
     .map-container iframe {
       height: 700px;
       margin-bottom: 0;
     }
 
-    /* NEW: Project description and image side-by-side */
     .project-section {
       display: flex;
       flex-wrap: wrap;
@@ -85,20 +95,24 @@
       align-items: flex-start;
       margin-bottom: 3rem;
     }
+
     .project-text {
       flex: 1;
       min-width: 300px;
     }
+
     .project-text h2 {
       font-size: 1.8rem;
       color: #1a1a1a;
       margin-bottom: 1rem;
     }
+
     .project-text p {
       line-height: 1.6;
       font-size: 1rem;
       color: #333;
     }
+
     .project-image {
       flex: 1;
       min-width: 300px;
@@ -106,11 +120,53 @@
       justify-content: center;
       align-items: center;
     }
+
     .project-image img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
       box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .map-description {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1rem;
+      max-width: 900px;
+    }
+
+    .variable-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: white;
+      text-transform: uppercase;
+      cursor: default;
+      transition: background-color 0.3s;
+    }
+
+    .tag.techno {
+      background-color: #005eff;
+    }
+
+    .tag.techno:hover {
+      background-color: #0045c2;
+    }
+
+    .tag.env {
+      background-color: #00a676;
+    }
+
+    .tag.env:hover {
+      background-color: #007e5b;
     }
   </style>
 </head>
@@ -147,9 +203,28 @@
     </section>
 
     <h2>Techno-Economic Suitability</h2>
+    <p class="map-description">
+      This map represents areas most suitable for solar deployment based on technical and economic conditions. Criteria were weighted and aggregated using the Analytic Hierarchy Process (AHP).
+    </p>
+    <div class="variable-tags">
+      <span class="tag techno">Land Cover</span>
+      <span class="tag techno">Slope</span>
+      <span class="tag techno">Aspect</span>
+      <span class="tag techno">Solar Irradiation</span>
+      <span class="tag techno">Proximity to Roads</span>
+    </div>
     <iframe src="techno_econ_map3.html"></iframe>
 
     <h2>Socio-Environmental Suitability</h2>
+    <p class="map-description">
+      This map highlights ecologically sensitive regions where solar development should be minimized. Suitability scores were derived using AHP based on environmental risk and conservation data.
+    </p>
+    <div class="variable-tags">
+      <span class="tag env">Biodiversity</span>
+      <span class="tag env">Protected Areas</span>
+      <span class="tag env">Sediment Risk</span>
+      <span class="tag env">Land Cover</span>
+    </div>
     <iframe src="socioenv_map3.html"></iframe>
 
     <h2>Conflict Zones (SPP in Unsuitable Areas)</h2>
@@ -163,7 +238,7 @@
         <iframe src="conflictenv.html"></iframe>
       </div>
     </div>
-  </div>
 
+  </div>
 </body>
 </html>
