@@ -76,6 +76,42 @@
       height: 700px;
       margin-bottom: 0;
     }
+
+    /* NEW: Project description and image side-by-side */
+    .project-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+    .project-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .project-text h2 {
+      font-size: 1.8rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+    .project-text p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+    }
+    .project-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -96,7 +132,19 @@
 
   <!-- Main content -->
   <div class="content">
-    <p>As Japan accelerates its renewable energy transition toward achieving carbon neutrality by 2050, solar power is projected to increase from 6.7% of the national energy mix in 2019 to as much as 16% by 2030. However, the country’s limited land availability and complex geography pose significant challenges for solar site selection. This study examines the spatial tension between techno-economic priorities and environmental considerations in the siting of solar power plants across Japan. Whereas existing studies often merge ecological and economic criteria into a unified suitability index, this research introduces a dual-suitability framework that isolates and contrasts these logics. Using the Analytic Hierarchy Process (AHP), we develop two independent suitability maps—one reflecting economic criteria (e.g., slope, irradiation, proximity to infrastructure) and the other reflecting environmental factors (e.g., biodiversity, protected areas). We then assess the spatial alignment between each suitability map and the actual distribution of solar power plants using Bivariate Moran’s I to quantify spatial autocorrelation and mismatch. Local spatial clusters are identified through LISA (Local Indicators of Spatial Association) and visualized via an interactive map that highlights areas of convergence and conflict. Findings indicate that economic considerations disproportionately drive current site selection, often at the expense of ecological integrity. The proposed framework offers a transparent and reproducible tool to support more balanced, accountable, and ecologically responsible decision-making in renewable energy planning.</p>
+
+    <!-- Project Description & Image -->
+    <section class="project-section">
+      <div class="project-text">
+        <h2>The Project</h2>
+        <p>
+          As Japan accelerates its renewable energy transition toward achieving carbon neutrality by 2050, solar power is projected to increase from 6.7% of the national energy mix in 2019 to as much as 16% by 2030. However, the country’s limited land availability and complex geography pose significant challenges for solar site selection. This study examines the spatial tension between techno-economic priorities and environmental considerations in the siting of solar power plants across Japan. Whereas existing studies often merge ecological and economic criteria into a unified suitability index, this research introduces a dual-suitability framework that isolates and contrasts these logics. Using the Analytic Hierarchy Process (AHP), we develop two independent suitability maps—one reflecting economic criteria (e.g., slope, irradiation, proximity to infrastructure) and the other reflecting environmental factors (e.g., biodiversity, protected areas). We then assess the spatial alignment between each suitability map and the actual distribution of solar power plants using Bivariate Moran’s I to quantify spatial autocorrelation and mismatch. Local spatial clusters are identified through LISA (Local Indicators of Spatial Association) and visualized via an interactive map that highlights areas of convergence and conflict. Findings indicate that economic considerations disproportionately drive current site selection, often at the expense of ecological integrity. The proposed framework offers a transparent and reproducible tool to support more balanced, accountable, and ecologically responsible decision-making in renewable energy planning.
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="ahp1.jpg" alt="Project visualization" />
+      </div>
+    </section>
 
     <h2>Techno-Economic Suitability</h2>
     <iframe src="techno_econ_map3.html"></iframe>
