@@ -1,44 +1,244 @@
-/* Add this new wrapper to keep everything centered and readable */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SPP Suitability – Elisabeth Viau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+    }
 
-/* Adjust project section to grow and shrink properly */
-.project-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
+    .navbar {
+      background-color: #1a1a1a;
+      overflow: hidden;
+      padding: 0.5rem 2rem;
+    }
 
-.project-text {
-  flex: 1 1 50%;
-  min-width: 300px;
-}
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.project-image {
-  flex: 1 1 45%;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .navbar a:hover {
+      background-color: #575757;
+    }
 
-.project-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
+    .banner {
+      background: url('panneaux1.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #003366;
+    }
 
-/* Make sure iframes also respect the container width */
-iframe {
-  width: 100%;
-  height: 600px;
-  border: 1px solid #aaa;
-  margin-bottom: 3rem;
-}
+    .banner h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.3em;
+    }
+
+    .banner p {
+      font-size: 1.3em;
+      max-width: 800px;
+      margin: auto;
+      color: #e0e0e0;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 3rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #aaa;
+      margin-bottom: 3rem;
+    }
+
+    .map-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .map-container {
+      flex: 1;
+      min-width: 48%;
+    }
+
+    .map-container h3 {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .map-container iframe {
+      height: 700px;
+      margin-bottom: 0;
+    }
+
+    .project-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    .project-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .project-text h2 {
+      font-size: 1.8rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .project-text p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .project-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .map-description {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1rem;
+      max-width: 900px;
+    }
+
+    .variable-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: white;
+      text-transform: uppercase;
+      cursor: default;
+      transition: background-color 0.3s;
+    }
+
+    .tag.techno {
+      background-color: #005eff;
+    }
+
+    .tag.techno:hover {
+      background-color: #0045c2;
+    }
+
+    .tag.env {
+      background-color: #00a676;
+    }
+
+    .tag.env:hover {
+      background-color: #007e5b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="ahp_method.html">AHP Method</a>
+    <a href="variables.html">Variables</a>
+    <a href="bivariate_moran.html">Bivariate Moran’s I</a>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Revealing Spatial Contradictions in Solar Deployment</h1>
+    <p>A Multicriteria Conflict Mapping Approach for Sustainable Energy Transitions</p>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+
+    <!-- Project Description & Image -->
+    <section class="project-section">
+      <div class="project-text">
+        <h2>The Project</h2>
+        <p>
+          As Japan accelerates its renewable energy transition toward achieving carbon neutrality by 2050, solar power is projected to increase from 6.7% of the national energy mix in 2019 to as much as 16% by 2030. However, the country’s limited land availability and complex geography pose significant challenges for solar site selection. This study examines the spatial tension between techno-economic priorities and environmental considerations in the siting of solar power plants across Japan. Whereas existing studies often merge ecological and economic criteria into a unified suitability index, this research introduces a dual-suitability framework that isolates and contrasts these logics. Using the Analytic Hierarchy Process (AHP), we develop two independent suitability maps—one reflecting economic criteria (e.g., slope, irradiation, proximity to infrastructure) and the other reflecting environmental factors (e.g., biodiversity, protected areas). We then assess the spatial alignment between each suitability map and the actual distribution of solar power plants using Bivariate Moran’s I to quantify spatial autocorrelation and mismatch. Local spatial clusters are identified through LISA (Local Indicators of Spatial Association) and visualized via an interactive map that highlights areas of convergence and conflict. Findings indicate that economic considerations disproportionately drive current site selection, often at the expense of ecological integrity. The proposed framework offers a transparent and reproducible tool to support more balanced, accountable, and ecologically responsible decision-making in renewable energy planning.
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="ahp3.jpg" alt="Project visualization" />
+      </div>
+    </section>
+
+    <h2>Techno-Economic Suitability</h2>
+    <p class="map-description">
+      This map represents areas most suitable for solar deployment based on technical and economic conditions. Criteria were weighted and aggregated using the Analytic Hierarchy Process (AHP).
+    </p>
+    <div class="variable-tags">
+      <span class="tag techno">Land Cover</span>
+      <span class="tag techno">Slope</span>
+      <span class="tag techno">Aspect</span>
+      <span class="tag techno">Solar Irradiation</span>
+      <span class="tag techno">Proximity to Roads</span>
+    </div>
+    <iframe src="techno_econ_map3.html"></iframe>
+
+    <h2>Socio-Environmental Suitability</h2>
+    <p class="map-description">
+      This map highlights ecologically sensitive regions where solar development should be minimized. Suitability scores were derived using AHP based on environmental risk and conservation data.
+    </p>
+    <div class="variable-tags">
+      <span class="tag env">Biodiversity</span>
+      <span class="tag env">Protected Areas</span>
+      <span class="tag env">Sediment Risk</span>
+      <span class="tag env">Land Cover</span>
+    </div>
+    <iframe src="socioenv_map3.html"></iframe>
+
+    <h2>Conflict Zones (SPP in Unsuitable Areas)</h2>
+    <div class="map-grid">
+      <div class="map-container">
+        <h3>Conflict – Techno-Economic Suitability</h3>
+        <iframe src="conflictecon.html"></iframe>
+      </div>
+      <div class="map-container">
+        <h3>Conflict – Socio-Environmental Suitability</h3>
+        <iframe src="conflictenv.html"></iframe>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
