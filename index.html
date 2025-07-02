@@ -44,6 +44,20 @@
       margin-top: 3rem;
     }
 
+    h4.subtitle {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      margin-top: 0.5rem;
+    }
+
+    .highlight-title {
+      color: #005eff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 3rem;
+    }
+
     iframe {
       width: 100%;
       height: 600px;
@@ -87,9 +101,9 @@
     }
 
     .project-text h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: #1a1a1a;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .project-text p {
@@ -97,7 +111,7 @@
       font-size: 1rem;
       color: #333;
       text-align: justify;
-      margin-top: 1.5rem;
+      margin-top: 1.2rem;
     }
 
     .project-image {
@@ -155,6 +169,23 @@
     .tag.env:hover {
       background-color: #007e5b;
     }
+
+    .insight-section {
+      margin-top: 3rem;
+    }
+
+    .insight-section ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .insight-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    .insight-section strong {
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -167,7 +198,7 @@
     <a href="bivariate_moran.html">Bivariate Moran’s I</a>
   </div>
 
-  <!-- Banner without title and subtitle -->
+  <!-- Banner -->
   <div class="banner"></div>
 
   <!-- Main content -->
@@ -177,14 +208,32 @@
     <section class="project-section">
       <div class="project-text">
         <h2>Site Selection for Solar Energy in Japan</h2>
-<h4>Uncovering Spatial Tensions Between Economy and Ecology</h4>
-        <p>
-          As Japan accelerates its renewable energy transition toward achieving carbon neutrality by 2050, solar power is projected to increase from 6.7% of the national energy mix in 2019 to as much as 16% by 2030. However, the country’s limited land availability and complex geography pose significant challenges for solar site selection. This study examines the spatial tension between techno-economic priorities and environmental considerations in the siting of solar power plants across Japan. Whereas existing studies often merge ecological and economic criteria into a unified suitability index, this research introduces a dual-suitability framework that isolates and contrasts these logics. Using the Analytic Hierarchy Process (AHP), we develop two independent suitability maps—one reflecting economic criteria (e.g., slope, irradiation, proximity to infrastructure) and the other reflecting environmental factors (e.g., biodiversity, protected areas). We then assess the spatial alignment between each suitability map and the actual distribution of solar power plants using Bivariate Moran’s I to quantify spatial autocorrelation and mismatch. Local spatial clusters are identified through LISA (Local Indicators of Spatial Association) and visualized via an interactive map that highlights areas of convergence and conflict. Findings indicate that economic considerations disproportionately drive current site selection, often at the expense of ecological integrity. The proposed framework offers a transparent and reproducible tool to support more balanced, accountable, and ecologically responsible decision-making in renewable energy planning.
-        </p>
+        <h4 class="subtitle">Uncovering Spatial Tensions Between Economy and Ecology</h4>
+
+        <p>As Japan accelerates its renewable energy transition toward achieving carbon neutrality by 2050, solar power is projected to increase from 6.7% of the national energy mix in 2019 to as much as 16% by 2030. However, the country’s limited land availability and complex geography pose significant challenges for solar site selection.</p>
+
+        <p>This study examines the spatial tension between techno-economic priorities and environmental considerations in the siting of solar power plants across Japan. Whereas existing studies often merge ecological and economic criteria into a unified suitability index, this research introduces a dual-suitability framework that isolates and contrasts these logics.</p>
+
+        <p>Using the Analytic Hierarchy Process (AHP), we develop two independent suitability maps—one reflecting economic criteria (e.g., slope, irradiation, proximity to infrastructure) and the other reflecting environmental factors (e.g., biodiversity, protected areas).</p>
+
+        <p>We then assess the spatial alignment between each suitability map and the actual distribution of solar power plants using Bivariate Moran’s I to quantify spatial autocorrelation and mismatch. Local spatial clusters are identified through LISA (Local Indicators of Spatial Association) and visualized via an interactive map that highlights areas of convergence and conflict.</p>
+
+        <p>Findings indicate that economic considerations disproportionately drive current site selection, often at the expense of ecological integrity. The proposed framework offers a transparent and reproducible tool to support more balanced, accountable, and ecologically responsible decision-making in renewable energy planning.</p>
       </div>
       <div class="project-image">
         <img src="ahp3.jpg" alt="Project visualization" />
       </div>
+    </section>
+
+    <!-- Section: Why separate both logics -->
+    <section class="insight-section">
+      <div class="highlight-title">Why analyze both logic separately?</div>
+      <p><strong>Most site selection studies merge economic and environmental criteria into a single score often diluting or overshadowing ecological priorities.</strong></p>
+      <ul>
+        <li>➤ In reality, the same factor (e.g., land cover) can score high economically but low environmentally. Creates conflicting interpretations and biased classifications</li>
+        <li>➤ This study does not aim to produce a single suitability map. Instead, it highlights how economic logic often dominates environmental logic in solar siting</li>
+        <li>➤ This study provides a dual-mapping framework to visualize conflict zones. It helps identify areas where economic and ecological priorities diverge. It supports transparent decision-making and encourages deeper investigation by planners and experts</li>
+      </ul>
     </section>
 
     <h2>Techno-Economic Suitability</h2>
